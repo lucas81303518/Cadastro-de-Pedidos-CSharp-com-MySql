@@ -49,45 +49,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs">
+    <Compile Include="screens\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
+    <Compile Include="screens\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Financas.cs">
+    <Compile Include="screens\Financas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Financas.Designer.cs">
+    <Compile Include="screens\Financas.Designer.cs">
       <DependentUpon>Financas.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedido.cs">
+    <Compile Include="screens\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedido.Designer.cs">
+    <Compile Include="screens\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tela Principal.cs">
+    <Compile Include="screens\Tela Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela Principal.Designer.cs">
+    <Compile Include="screens\Tela Principal.Designer.cs">
       <DependentUpon>Tela Principal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cliente.resx">
+    <EmbeddedResource Include="screens\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Financas.resx">
+    <EmbeddedResource Include="screens\Financas.resx">
       <DependentUpon>Financas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedido.resx">
+    <EmbeddedResource Include="screens\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,7 +100,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tela Principal.resx">
+    <EmbeddedResource Include="screens\Tela Principal.resx">
       <DependentUpon>Tela Principal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
