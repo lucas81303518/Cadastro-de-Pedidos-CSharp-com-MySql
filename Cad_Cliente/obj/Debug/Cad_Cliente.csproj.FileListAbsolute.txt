@@ -1,0 +1,25 @@
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe.config
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.pdb
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\bin\Debug\MySql.Data.dll
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Form1.resources
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Properties.Resources.resources
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.GenerateResource.cache
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.CopyComplete
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.exe
+C:\Users\lucas\source\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.pdb
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.AssemblyReference.cache
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Properties.Resources.resources
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.GenerateResource.cache
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.exe
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.pdb
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe.config
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.pdb
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.CopyComplete
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Cliente.resources
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Pedido.resources
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Financas.resources
