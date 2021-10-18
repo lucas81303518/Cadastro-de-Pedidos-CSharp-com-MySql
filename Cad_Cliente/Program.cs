@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cad_Cliente.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,11 @@ namespace Cad_Cliente
         [STAThread]
         static void Main()
         {
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cliente());
+            Application.Run(new Tela_Login());
+
         }
     }
 }

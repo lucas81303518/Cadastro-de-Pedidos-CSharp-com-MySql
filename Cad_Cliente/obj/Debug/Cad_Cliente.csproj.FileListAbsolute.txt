@@ -19,7 +19,8 @@ C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orien
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe.config
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.exe
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\bin\Debug\Cad_Cliente.pdb
-C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.csproj.CopyComplete
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Cliente.resources
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Pedido.resources
 C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Financas.resources
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Tela_Login.resources
+C:\Users\lucas\Desktop\Lucas\Trabalho Atividades\Materias 2021\1ºSemestre\Orientação a objeto\repos\Cad_Cliente\Cad_Cliente\obj\Debug\Cad_Cliente.Models.Usuario.resources

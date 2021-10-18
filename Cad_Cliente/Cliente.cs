@@ -17,7 +17,7 @@ namespace Cad_Cliente
         MySqlDataAdapter Da;
         MySqlDataReader Dr;
         string strSQL;
-        public Cliente( )
+        public Cliente()
         {
             InitializeComponent();
         }
@@ -68,115 +68,147 @@ namespace Cad_Cliente
                 Conexao.Close();
                 Conexao = null;
                 Comando = null;
+                Exibir();
             }
         }
         //Metodo para editar cliente
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtID.Text != "")
             {
-                Connection();
+                
+                try
+                {
+                    Connection();
 
-                strSQL = "UPDATE Cliente SET NOME = @NOME, TELEFONE = @TELEFONE, ENDEREÇO = @ENDEREÇO, NUMERO = @NUMERO, CEP = @CEP, INSTAGRAM = @INSTAGRAM WHERE ID = @ID";
                     
-                Comando = new MySqlCommand(strSQL, Conexao);
-                Comando.Parameters.AddWithValue("@ID", txtID.Text);
-                Comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                Comando.Parameters.AddWithValue("@TELEFONE", txtTel.Text);
-                Comando.Parameters.AddWithValue("@ENDEREÇO", txtEnd.Text);
-                Comando.Parameters.AddWithValue("@NUMERO", txtNum.Text);
-                Comando.Parameters.AddWithValue("@CEP", txtCep.Text);
-                Comando.Parameters.AddWithValue("@INSTAGRAM", txtInstagram.Text);
-                Conexao.Open();
-                Comando.ExecuteNonQuery();
+                        strSQL = "UPDATE Cliente SET NOME = @NOME, TELEFONE = @TELEFONE, ENDEREÇO = @ENDEREÇO, NUMERO = @NUMERO, CEP = @CEP, INSTAGRAM = @INSTAGRAM WHERE ID = @ID";
+
+                        Comando = new MySqlCommand(strSQL, Conexao);
+                        Comando.Parameters.AddWithValue("@ID", txtID.Text);
+                        Comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                        Comando.Parameters.AddWithValue("@TELEFONE", txtTel.Text);
+                        Comando.Parameters.AddWithValue("@ENDEREÇO", txtEnd.Text);
+                        Comando.Parameters.AddWithValue("@NUMERO", txtNum.Text);
+                        Comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                        Comando.Parameters.AddWithValue("@INSTAGRAM", txtInstagram.Text);
+                        Conexao.Open();
+                        Comando.ExecuteNonQuery();
+                        
+                        LimparTela();
+                   
+                }
+                
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+
+                finally
+                {
+                    Conexao.Close();
+                    Conexao = null;
+                    Comando = null;
+                    Exibir();
+                }
             }
-            catch (Exception Ex)
+            else
             {
-                MessageBox.Show(Ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
-                Conexao = null;
-                Comando = null;
+                MessageBox.Show("Digite o ID do cliente para Editar!!");
             }
         }
+        private void toolTip()
+        {
+            tp_Novo.SetToolTip(btnNovo, "Este botão irá adicionar um novo cliente.");
+            tp_Editar.SetToolTip(btnEditar, "Este botão irá editar um cliente com base no ID do cliente.");
+            tp_Consultar.SetToolTip(btnConsultar, "Este botão irá trazer para tela um cliente já cadastrado com base no ID do cliente.");
+            tp_Excluir.SetToolTip(btnExcluir, "Este botão irá excluir um cliente com base no ID do cliente.");
+            
+        }
+        
         //Metodo para excluir cliente
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            
-            DialogResult dialogResult = new DialogResult();
-            try
+            if (txtID.Text != "")
             {
-                Connection();
-                dialogResult = MessageBox.Show("Deseja Realmente Excluir esse Cliente?", "ATENÇAO!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialogResult == DialogResult.Yes)
-
+                DialogResult dialogResult = new DialogResult();
+                try
                 {
-                    strSQL = "DELETE FROM Cliente WHERE ID = @ID";
+                    Connection();
 
-                    Comando = new MySqlCommand(strSQL, Conexao);
-                    Comando.Parameters.AddWithValue("@ID", txtID.Text);
-                    Comando.Parameters.AddWithValue("@Nome", txtNome.Text);
+                    dialogResult = MessageBox.Show("Deseja Realmente Excluir o Cliente ?", "ATENÇAO!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
 
-                    Conexao.Open();
-                    Comando.ExecuteNonQuery();
+                    {
+                        strSQL = "DELETE FROM Cliente WHERE ID = @ID";
+
+                        Comando = new MySqlCommand(strSQL, Conexao);
+                        Comando.Parameters.AddWithValue("@ID", txtID.Text);
+                        Comando.Parameters.AddWithValue("@Nome", txtNome.Text);
+
+                        Conexao.Open();
+                        Comando.ExecuteNonQuery();
+
+                        LimparTela();
+                    }
+                   
                 }
-                else
+                catch (Exception Ex)
                 {
-
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                    Conexao = null;
+                    Comando = null;
+                    Exibir();
                 }
             }
-            catch (Exception Ex)
+            else
             {
-                MessageBox.Show(Ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
-                Conexao = null;
-                Comando = null;
+                MessageBox.Show("Digite o ID do Cliente que deseja Excluir!!");
             }
         }
         //Metodo de consultar cliente
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Connection();
-
-                strSQL = "SELECT * FROM Cliente WHERE ID = @ID";
-
-                Comando = new MySqlCommand(strSQL, Conexao);
-                Comando.Parameters.AddWithValue("@ID", txtID.Text);
-
-                Conexao.Open();
-                Dr = Comando.ExecuteReader();
-
-                while (Dr.Read())
+                try
                 {
-                    txtNome.Text = Convert.ToString(Dr["Nome"]);
-                    txtTel.Text = Convert.ToString(Dr["Telefone"]);
-                    txtEnd.Text = Convert.ToString(Dr["Endereço"]);
-                    txtNum.Text = Convert.ToString(Dr["Numero"]);
-                    txtCep.Text = Convert.ToString(Dr["Cep"]);
-                    txtInstagram.Text = Convert.ToString(Dr["Instagram"]);
-                   
+                    Connection();
+
+                    strSQL = "SELECT * FROM Cliente WHERE ID = @ID";
+
+                    Comando = new MySqlCommand(strSQL, Conexao);
+                    Comando.Parameters.AddWithValue("@ID", txtID.Text);
+
+                    Conexao.Open();
+
+                    Dr = Comando.ExecuteReader();
+
+                    while (Dr.Read())
+                    {
+                        txtNome.Text = Convert.ToString(Dr["Nome"]);
+                        txtTel.Text = Convert.ToString(Dr["Telefone"]);
+                        txtEnd.Text = Convert.ToString(Dr["Endereço"]);
+                        txtNum.Text = Convert.ToString(Dr["Numero"]);
+                        txtCep.Text = Convert.ToString(Dr["Cep"]);
+                        txtInstagram.Text = Convert.ToString(Dr["Instagram"]);
+
+                    }
                 }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
-                Conexao = null;
-                Comando = null;
-            }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                    Conexao = null;
+                    Comando = null;
+                }
         }
-        //Metodo de exibir dados do cliente
-        private void btnExibir_Click(object sender, EventArgs e)
+    private void Exibir()
         {
             try
             {
@@ -202,8 +234,8 @@ namespace Cad_Cliente
                 Conexao = null;
                 Comando = null;
             }
-        }
-
+        } 
+       
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparTela();
@@ -212,20 +244,24 @@ namespace Cad_Cliente
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
 
-            if (txtBusca.Text != "")
+            if (txtBusca_Cliente.Text != "")
             {
                 try
                 {
                     Connection();
 
                     Conexao.Open();
+
                     Comando = new MySqlCommand();
-                    Comando.CommandText = "Select Cliente.ID, Cliente.Nome, " +
-                        "Cliente.Telefone, Cliente.Endereço, Cliente.Numero, " +
-                        "Cliente.Cep, Cliente.Instagram From Cliente Where Cliente.Nome like ('%"+txtBusca.Text +"%')";
+
+                    Comando.CommandText = "Select * from Cliente " +
+                        "Where Cliente.Nome like ('%"+txtBusca_Cliente.Text +"%')";
+
                     Comando.Connection = Conexao;
+
                     Da = new MySqlDataAdapter();
                     DataTable dt = new DataTable();
+
                     Da.SelectCommand = Comando;
                     Da.Fill(dt);
                     DgvCliente.DataSource = dt;
@@ -243,18 +279,27 @@ namespace Cad_Cliente
                    Comando = null;
                 }
             }
-            else { 
-
+            else {
+                Exibir();
                  }
         }
         //Evento quando clica em Pedido
-        private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
+      
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+            toolTip();
+            Exibir();
+        }
+
+        private void pedidoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Pedido pedido = new Pedido();
+            this.Hide();
             pedido.ShowDialog();
         }
-        //Evento quando clica em Finanças
-        private void finançasToolStripMenuItem_Click(object sender, EventArgs e)
+
+        //Método quando clica em Finanças abre a tela
+        private void finançasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Financas financas = new Financas();
             financas.ShowDialog();

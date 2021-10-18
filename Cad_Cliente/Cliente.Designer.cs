@@ -29,6 +29,12 @@ namespace Cad_Cliente
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +44,6 @@ namespace Cad_Cliente
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.btnExibir = new System.Windows.Forms.Button();
             this.DgvCliente = new System.Windows.Forms.DataGridView();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.txtEnd = new System.Windows.Forms.TextBox();
@@ -49,15 +54,16 @@ namespace Cad_Cliente
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtInstagram = new System.Windows.Forms.MaskedTextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.txtBusca_Cliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.exibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.finançasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.datasComemorativasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tp_Novo = new System.Windows.Forms.ToolTip(this.components);
+            this.tp_Editar = new System.Windows.Forms.ToolTip(this.components);
+            this.tp_Excluir = new System.Windows.Forms.ToolTip(this.components);
+            this.tp_Consultar = new System.Windows.Forms.ToolTip(this.components);
+            this.tp_Exibir = new System.Windows.Forms.ToolTip(this.components);
+            this.finançasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +72,7 @@ namespace Cad_Cliente
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.Location = new System.Drawing.Point(15, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 0;
@@ -76,7 +82,7 @@ namespace Cad_Cliente
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 85);
+            this.label2.Location = new System.Drawing.Point(11, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 1;
@@ -86,7 +92,7 @@ namespace Cad_Cliente
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 151);
+            this.label3.Location = new System.Drawing.Point(15, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 2;
@@ -94,117 +100,149 @@ namespace Cad_Cliente
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(12, 49);
+            this.txtID.Location = new System.Drawing.Point(14, 49);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(116, 22);
-            this.txtID.TabIndex = 1;
+            this.txtID.Size = new System.Drawing.Size(132, 23);
+            this.txtID.TabIndex = 30;
+            this.txtID.TabStop = false;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(14, 106);
+            this.txtNome.Location = new System.Drawing.Point(16, 106);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(186, 22);
+            this.txtNome.Size = new System.Drawing.Size(212, 23);
             this.txtNome.TabIndex = 2;
             // 
             // btnNovo
             // 
+            this.btnNovo.BackColor = System.Drawing.Color.Pink;
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(12, 232);
+            this.btnNovo.Location = new System.Drawing.Point(14, 232);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(87, 30);
+            this.btnNovo.Size = new System.Drawing.Size(99, 30);
             this.btnNovo.TabIndex = 7;
             this.btnNovo.TabStop = false;
             this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.Pink;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(104, 232);
+            this.btnEditar.Location = new System.Drawing.Point(119, 232);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(87, 30);
+            this.btnEditar.Size = new System.Drawing.Size(99, 30);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.TabStop = false;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Pink;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(195, 232);
+            this.btnExcluir.Location = new System.Drawing.Point(223, 232);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(87, 30);
+            this.btnExcluir.Size = new System.Drawing.Size(99, 30);
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.TabStop = false;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnConsultar
             // 
+            this.btnConsultar.BackColor = System.Drawing.Color.Pink;
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(285, 232);
+            this.btnConsultar.Location = new System.Drawing.Point(326, 232);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(87, 30);
+            this.btnConsultar.Size = new System.Drawing.Size(99, 30);
             this.btnConsultar.TabIndex = 10;
             this.btnConsultar.TabStop = false;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // btnExibir
-            // 
-            this.btnExibir.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibir.Location = new System.Drawing.Point(379, 232);
-            this.btnExibir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(87, 30);
-            this.btnExibir.TabIndex = 11;
-            this.btnExibir.TabStop = false;
-            this.btnExibir.Text = "Exibir";
-            this.btnExibir.UseVisualStyleBackColor = true;
-            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // DgvCliente
             // 
-            this.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvCliente.Location = new System.Drawing.Point(11, 269);
+            this.DgvCliente.AllowUserToAddRows = false;
+            this.DgvCliente.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            this.DgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DgvCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.DgvCliente.BackgroundColor = System.Drawing.Color.Pink;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvCliente.DefaultCellStyle = dataGridViewCellStyle33;
+            this.DgvCliente.GridColor = System.Drawing.Color.DimGray;
+            this.DgvCliente.Location = new System.Drawing.Point(13, 269);
             this.DgvCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DgvCliente.Name = "DgvCliente";
-            this.DgvCliente.Size = new System.Drawing.Size(846, 215);
+            this.DgvCliente.ReadOnly = true;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvCliente.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            this.DgvCliente.Size = new System.Drawing.Size(732, 215);
             this.DgvCliente.TabIndex = 12;
             this.DgvCliente.TabStop = false;
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(17, 172);
+            this.txtTel.Location = new System.Drawing.Point(19, 172);
             this.txtTel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTel.Mask = "(00) 0 0000-0000";
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(116, 22);
+            this.txtTel.Size = new System.Drawing.Size(132, 23);
             this.txtTel.TabIndex = 3;
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(280, 49);
+            this.txtEnd.Location = new System.Drawing.Point(320, 49);
             this.txtEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(186, 22);
+            this.txtEnd.Size = new System.Drawing.Size(212, 23);
             this.txtEnd.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(277, 27);
+            this.label4.Location = new System.Drawing.Point(317, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 17;
@@ -213,34 +251,34 @@ namespace Cad_Cliente
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(277, 151);
+            this.label5.Location = new System.Drawing.Point(317, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.Size = new System.Drawing.Size(38, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "CEP:";
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(280, 174);
+            this.txtCep.Location = new System.Drawing.Point(320, 174);
             this.txtCep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCep.Mask = "00-000-000";
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(81, 22);
+            this.txtCep.Size = new System.Drawing.Size(92, 23);
             this.txtCep.TabIndex = 6;
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(280, 107);
+            this.txtNum.Location = new System.Drawing.Point(320, 107);
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(123, 22);
+            this.txtNum.Size = new System.Drawing.Size(140, 23);
             this.txtNum.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(277, 85);
+            this.label6.Location = new System.Drawing.Point(317, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 22;
@@ -250,7 +288,7 @@ namespace Cad_Cliente
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(503, 27);
+            this.label7.Location = new System.Drawing.Point(575, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 17);
             this.label7.TabIndex = 24;
@@ -258,39 +296,26 @@ namespace Cad_Cliente
             // 
             // txtInstagram
             // 
-            this.txtInstagram.Location = new System.Drawing.Point(507, 49);
+            this.txtInstagram.Location = new System.Drawing.Point(579, 49);
             this.txtInstagram.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInstagram.Name = "txtInstagram";
-            this.txtInstagram.Size = new System.Drawing.Size(146, 22);
+            this.txtInstagram.Size = new System.Drawing.Size(166, 23);
             this.txtInstagram.TabIndex = 7;
             // 
-            // btnLimpar
+            // txtBusca_Cliente
             // 
-            this.btnLimpar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(381, 170);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(142, 30);
-            this.btnLimpar.TabIndex = 26;
-            this.btnLimpar.TabStop = false;
-            this.btnLimpar.Text = "Limpar Campos";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.Location = new System.Drawing.Point(661, 236);
-            this.txtBusca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(196, 22);
-            this.txtBusca.TabIndex = 27;
-            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtBusca_Cliente.Location = new System.Drawing.Point(522, 232);
+            this.txtBusca_Cliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBusca_Cliente.Name = "txtBusca_Cliente";
+            this.txtBusca_Cliente.Size = new System.Drawing.Size(223, 23);
+            this.txtBusca_Cliente.TabIndex = 27;
+            this.txtBusca_Cliente.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(593, 236);
+            this.label8.Location = new System.Drawing.Point(445, 232);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 28;
@@ -298,60 +323,41 @@ namespace Cad_Cliente
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Pink;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exibirToolStripMenuItem});
+            this.pedidoToolStripMenuItem,
+            this.finançasToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(868, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(762, 25);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // exibirToolStripMenuItem
-            // 
-            this.exibirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pedidoToolStripMenuItem,
-            this.estoqueToolStripMenuItem,
-            this.finançasToolStripMenuItem,
-            this.datasComemorativasToolStripMenuItem});
-            this.exibirToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
-            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.exibirToolStripMenuItem.Text = "Exibir";
-            // 
             // pedidoToolStripMenuItem
             // 
+            this.pedidoToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.pedidoToolStripMenuItem.Text = "Pedido";
-            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
+            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click_1);
             // 
-            // estoqueToolStripMenuItem
+            // finançasToolStripMenuItem1
             // 
-            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.estoqueToolStripMenuItem.Text = "Estoque";
-            // 
-            // finançasToolStripMenuItem
-            // 
-            this.finançasToolStripMenuItem.Name = "finançasToolStripMenuItem";
-            this.finançasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.finançasToolStripMenuItem.Text = "Finanças";
-            this.finançasToolStripMenuItem.Click += new System.EventHandler(this.finançasToolStripMenuItem_Click);
-            // 
-            // datasComemorativasToolStripMenuItem
-            // 
-            this.datasComemorativasToolStripMenuItem.Name = "datasComemorativasToolStripMenuItem";
-            this.datasComemorativasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.datasComemorativasToolStripMenuItem.Text = "Datas Comemorativas";
+            this.finançasToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finançasToolStripMenuItem1.Name = "finançasToolStripMenuItem1";
+            this.finançasToolStripMenuItem1.Size = new System.Drawing.Size(76, 21);
+            this.finançasToolStripMenuItem1.Text = "Finanças";
+            this.finançasToolStripMenuItem1.Click += new System.EventHandler(this.finançasToolStripMenuItem1_Click);
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 497);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(762, 497);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtBusca);
-            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.txtBusca_Cliente);
             this.Controls.Add(this.txtInstagram);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNum);
@@ -362,7 +368,6 @@ namespace Cad_Cliente
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.DgvCliente);
-            this.Controls.Add(this.btnExibir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -373,12 +378,13 @@ namespace Cad_Cliente
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCliente)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -398,7 +404,6 @@ namespace Cad_Cliente
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Button btnExibir;
         private System.Windows.Forms.DataGridView DgvCliente;
         private System.Windows.Forms.MaskedTextBox txtTel;
         private System.Windows.Forms.TextBox txtEnd;
@@ -409,15 +414,16 @@ namespace Cad_Cliente
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox txtInstagram;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.TextBox txtBusca_Cliente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem exibirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem finançasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem datasComemorativasToolStripMenuItem;
+        private System.Windows.Forms.ToolTip tp_Novo;
+        private System.Windows.Forms.ToolTip tp_Editar;
+        private System.Windows.Forms.ToolTip tp_Excluir;
+        private System.Windows.Forms.ToolTip tp_Consultar;
+        private System.Windows.Forms.ToolTip tp_Exibir;
+        private System.Windows.Forms.ToolStripMenuItem finançasToolStripMenuItem1;
     }
 }
 

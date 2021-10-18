@@ -61,6 +61,9 @@
     <Compile Include="Financas.Designer.cs">
       <DependentUpon>Financas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +72,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tela Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela Principal.Designer.cs">
+      <DependentUpon>Tela Principal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Financas.resx">
       <DependentUpon>Financas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
@@ -86,7 +98,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tela Principal.resx">
+      <DependentUpon>Tela Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +115,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo maluart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poente.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\175.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo maluart fundo preto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
