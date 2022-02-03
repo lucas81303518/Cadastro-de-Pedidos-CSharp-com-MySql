@@ -7,19 +7,19 @@ using System.Windows.Forms;
 
 namespace Cad_Cliente.Models
 {
-    public class Usuario : Form
+    public class Usuario
     {
         private string Login { get; set; }
         private string Senha { get; set; }
 
-        public Usuario(string login, string senha) 
+        public Usuario(string login, string senha)
         {
             Login = login;
             Senha = senha;
         }
         public bool ValidarUsuario(TextBox login, TextBox senha)
         {
-            if(Login == login.Text && Senha == senha.Text)
+            if (Login == login.Text && Senha == senha.Text)
             {
                 LimparTela();
                 return true;
@@ -51,21 +51,9 @@ namespace Cad_Cliente.Models
             }
             void LimparTela()
             {
-                 login.Text = "";
-                 senha.Text = "";
+                login.Text = "";
+                senha.Text = "";
             }
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Usuario
-            // 
-            this.ClientSize = new System.Drawing.Size(527, 222);
-            this.Name = "Usuario";
-            this.ResumeLayout(false);
-
         }
     }
 }

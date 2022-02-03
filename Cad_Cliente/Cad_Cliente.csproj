@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
@@ -49,60 +52,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="screens\Cliente.cs">
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screens\Cliente.Designer.cs">
+    <Compile Include="Views\CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="screens\Financas.cs">
+    <Compile Include="Views\Financas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screens\Financas.Designer.cs">
+    <Compile Include="Views\Financas.Designer.cs">
       <DependentUpon>Financas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Usuario.cs">
+    <Compile Include="Views\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screens\Pedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="screens\Pedido.Designer.cs">
+    <Compile Include="Views\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="screens\Tela Principal.cs">
+    <Compile Include="Views\Tela Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screens\Tela Principal.Designer.cs">
+    <Compile Include="Views\Tela Principal.Designer.cs">
       <DependentUpon>Tela Principal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="screens\Cliente.resx">
+    <Compile Include="Views\Validacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Validacao.Designer.cs">
+      <DependentUpon>Validacao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screens\Financas.resx">
+    <EmbeddedResource Include="Views\Financas.resx">
       <DependentUpon>Financas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Models\Usuario.resx">
-      <DependentUpon>Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="screens\Pedido.resx">
+    <EmbeddedResource Include="Views\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="screens\Tela Principal.resx">
+    <EmbeddedResource Include="Views\Tela Principal.resx">
       <DependentUpon>Tela Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Validacao.resx">
+      <DependentUpon>Validacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,7 +149,55 @@
     <None Include="Resources\perfil.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download.png" />
+    <None Include="Resources\icons8-editar-nó-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-wastebasket-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-live-folder-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-assinatura-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58371b68db.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastros1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salvar-48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcluirBarra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salvar-481.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-assinatura-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sincronizar-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

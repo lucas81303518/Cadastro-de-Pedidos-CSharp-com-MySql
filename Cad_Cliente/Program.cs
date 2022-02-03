@@ -1,4 +1,5 @@
 ﻿using Cad_Cliente.Models;
+using Cad_Cliente.screens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Cad_Cliente
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_Login());
+            Application.Run(new Tela_Principal());
 
         }
     }
