@@ -17,21 +17,56 @@ namespace Cad_Cliente
         public Tela_Login()
         {
             InitializeComponent();
-            
         }
-       
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario Mariana = new Usuario("Admin", "23072807");
+            Tela_Principal tela_Principal = new Tela_Principal();
 
-           if( Mariana.ValidarUsuario(txtLogin, txtSenha))
+            Admin Mariana = new Admin("Mari", "23072807");
+            Usuario Lucas = new Usuario("Lucas", "23072807");
+
+            if (ValidarUsuario(Mariana))
             {
-                Tela_Principal tela_Principal = new Tela_Principal();
                 tela_Principal.Show();
+
+                txtLogin.Text = "";
+                txtSenha.Text = "";
+            }
+        }
+        public bool ValidarUsuario(Usuario usuario)
+        {
+            if (usuario.Login == txtLogin.Text && usuario.Senha == txtSenha.Text)
+            {
+                return true;
+            }
+            else if (txtLogin.Text == "")
+            {
+                MessageBox.Show("Campo de login não preenchido!!");
+                return false;
+
+            }
+            else if (txtSenha.Text == "")
+            {
+                MessageBox.Show("Campo de senha não preenchido!!");
+                return false;
+
+
+            }
+            else if (txtLogin.Text == "" && txtSenha.Text == "")
+            {
+                MessageBox.Show("Campos não preenchidos!!");
+                return false;
+
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha Inválidos!!");
+                return false;
+
             }
 
         }
-
         private void checkBox1_Click(object sender, EventArgs e)
         {
             if (checkBox_Senha.Checked)
@@ -43,6 +78,6 @@ namespace Cad_Cliente
                 txtSenha.UseSystemPasswordChar = true;
             }
         }
-   
+
     }
 }

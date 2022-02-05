@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cad_Cliente.Views;
-using Correios.Net;
 using MySql.Data.MySqlClient;
 namespace Cad_Cliente
 {
     public partial class Cliente : Form
     {
-       
-        private int _getId;
-        private string _getNome;
+        public int _getId;
+        public string _getNome;
 
         MySqlConnection Conexao;
         MySqlCommand Comando;
         MySqlDataAdapter Da;
-        
+
+        public bool Edit = false;//Variável de controle
+
         string strSQL;
 
         public Cliente()
@@ -67,43 +61,51 @@ namespace Cad_Cliente
                 Comando = null;
             }
         }
-
+        
         private void Cliente_Load(object sender, EventArgs e)
         {
             toolTip();
             Exibir();
         }
 
-
-        private void DgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)//Quando clicar ele
-                                                                                     //pega o ID e Nome do Cliente
+        //Quando clicar  na célula ele pega o ID e Nome do Cliente
+        private void DgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _getId = Convert.ToInt32(DgvCliente.CurrentRow.Cells[0].Value);
             _getNome = DgvCliente.CurrentRow.Cells[1].Value.ToString();
-
+            DgvCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
         }
         //Menu de Novo cliente
         private void novoCliente_Click(object sender, EventArgs e)
         {
             CadastroCliente cadastroCliente = new CadastroCliente();
             cadastroCliente.Show();
-
-            Exibir();
         }
 
-        private void editarCliente_Click(object sender, EventArgs e)
+        public void editarCliente_Click(object sender, EventArgs e)
         {
-         
-            CadastroCliente cadastroCliente = new CadastroCliente();
-            cadastroCliente.EditarCliente(_getId, _getNome);
-            cadastroCliente.Show();
+            Edit = true;
 
-            Exibir();
+            CadastroCliente cadastroCliente = new CadastroCliente();
+            cadastroCliente.getIdNomeClient(_getId, _getNome);
+            cadastroCliente.getEdit(Edit);
+            cadastroCliente.getSelecionado();
+                if(_getId != 0)
+            {
+                cadastroCliente.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione o cliente para editar.", "Atenção!!");
+            }
+
         }
         private void excluirCliente_Click(object sender, EventArgs e)
         {
             CadastroCliente cadastroCliente = new CadastroCliente();
-            cadastroCliente.ExcluirCliente(_getId, _getNome);
+            cadastroCliente.getIdNomeClient(_getId, _getNome);
+            cadastroCliente.ExcluirCliente();
+
             Exibir();
         }
         

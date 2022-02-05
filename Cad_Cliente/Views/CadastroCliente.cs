@@ -14,8 +14,6 @@ namespace Cad_Cliente.Views
     public partial class CadastroCliente : Form
     {
 
-        public int cont = 0;//Gambiarra
-
         MySqlConnection Conexao;
         MySqlCommand Comando;
         MySqlDataReader Dr;
@@ -23,43 +21,44 @@ namespace Cad_Cliente.Views
         string strSQL;
 
         public bool Edit = false; //Variavel de controle 
-        public int _getId;//É vazio até chamar o Editar
-        public string _getNome;//É vazio até chamar o Editar
+        public int _getId;//Variavel para guardar o Id do cliente  
+        public string _getNome;
 
         public CadastroCliente()
         {
             InitializeComponent();
-           
+
         }
 
         private void Connection()//Método de conexão com banco
         {
             Conexao = new MySqlConnection("Server=localhost;Database=cad_clientes;Uid=root;Pwd=root;");
         }
-        private void LimparTela()
+        //Método de limpar campos
+        private void cleanScreen()
         {
             txtNome.Text = "";
             txtTel.Text = "";
             txtCep.Text = "";
             txtEnd.Text = "";
-            //txtEstado.Text = "";
             txtInstagram.Text = "";
             txtNum.Text = "";
-            //txtCidade.Text = "";
-
         }
-
-        public void NewCliente()
+        //Método para adicionar novo cliente no banco  de dados
+        public void newClient()
         {
             try
             {
                 Connection();
 
-                strSQL = "INSERT INTO Cliente (NOME, TELEFONE, ENDEREÇO, NUMERO, CEP, INSTAGRAM) VALUES ( @NOME, @TELEFONE, @ENDEREÇO, @NUMERO, @CEP, @INSTAGRAM)";
+                strSQL = "INSERT INTO Cliente (NOME, TELEFONE,ESTADO, CIDADE, ENDEREÇO, NUMERO, CEP, INSTAGRAM)" +
+                                " VALUES ( @NOME, @TELEFONE,@ESTADO, @CIDADE, @ENDEREÇO, @NUMERO, @CEP, @INSTAGRAM)";
 
                 Comando = new MySqlCommand(strSQL, Conexao);
                 Comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                 Comando.Parameters.AddWithValue("@TELEFONE", txtTel.Text);
+                Comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                Comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
                 Comando.Parameters.AddWithValue("@ENDEREÇO", txtEnd.Text);
                 Comando.Parameters.AddWithValue("@NUMERO", txtNum.Text);
                 Comando.Parameters.AddWithValue("@CEP", txtCep.Text);
@@ -75,27 +74,17 @@ namespace Cad_Cliente.Views
             finally
             {
                 MessageBox.Show($"Cliente {txtNome.Text} cadastrado com sucesso", "Parabéns!!");
-                LimparTela();
+                cleanScreen();
                 Conexao.Close();
                 Conexao = null;
                 Comando = null;
                 Hide();
             }
         }
-        public void EditarCliente(int id, string nome)
+        //Método para atualizar o cliente selecionado.
+        public void updateClient()
         {
-
-            cont++;//Gambiarra que nao sei o que fazer
-
-            Edit = true;
-
-            _getId = id;
-            _getNome = nome;
-
-
-
             DialogResult dialogResult = new DialogResult();
-
             try
             {
                 Connection();
@@ -106,12 +95,16 @@ namespace Cad_Cliente.Views
                                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
 
-                        strSQL = "UPDATE Cliente SET NOME = @NOME, TELEFONE = @TELEFONE, ENDEREÇO = @ENDEREÇO, NUMERO = @NUMERO, CEP = @CEP, INSTAGRAM = @INSTAGRAM WHERE ID = @ID";
+                        strSQL = "UPDATE Cliente SET NOME = @NOME, TELEFONE = @TELEFONE,ESTADO = @ESTADO," +
+                                " CIDADE = @CIDADE, ENDEREÇO = @ENDEREÇO, NUMERO = @NUMERO, CEP = @CEP," +
+                                " INSTAGRAM = @INSTAGRAM WHERE ID = @ID";
 
                     Comando = new MySqlCommand(strSQL, Conexao);
                     Comando.Parameters.AddWithValue("@ID", _getId);
                     Comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                     Comando.Parameters.AddWithValue("@TELEFONE", txtTel.Text);
+                    Comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                    Comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
                     Comando.Parameters.AddWithValue("@ENDEREÇO", txtEnd.Text);
                     Comando.Parameters.AddWithValue("@NUMERO", txtNum.Text);
                     Comando.Parameters.AddWithValue("@CEP", txtCep.Text);
@@ -119,18 +112,11 @@ namespace Cad_Cliente.Views
                     Conexao.Open();
                     Comando.ExecuteNonQuery();
 
-                    LimparTela();
+                    cleanScreen();
                 }
                 else
                 {
-                    if (cont > 1)
-                    {
-                        MessageBox.Show("Campos não preenchidos para edição!!");
-
-                    }
-                    else
-                    {
-                    }
+                    MessageBox.Show("Campos não preenchidos para edição!!");
                 }
             }
 
@@ -147,11 +133,10 @@ namespace Cad_Cliente.Views
                 Hide();
             }
 
-
         }
         //Ao selecionar um cliente da tabela ele pega o Id do cliente
         //e retorna as informações para os textbox
-        public void pegaSelecionado()
+        public void getSelecionado()
         {
             try
             {
@@ -170,6 +155,8 @@ namespace Cad_Cliente.Views
                 {
                     txtNome.Text = Convert.ToString(Dr["Nome"]);
                     txtTel.Text = Convert.ToString(Dr["Telefone"]);
+                    txtEstado.Text = Convert.ToString(Dr["Estado"]);
+                    txtCidade.Text = Convert.ToString(Dr["Cidade"]);
                     txtEnd.Text = Convert.ToString(Dr["Endereço"]);
                     txtNum.Text = Convert.ToString(Dr["Numero"]);
                     txtCep.Text = Convert.ToString(Dr["Cep"]);
@@ -188,10 +175,10 @@ namespace Cad_Cliente.Views
                 Comando = null;
             }
         }
-        public void ExcluirCliente(int id, string nome)
+        //Método para Excluir os cliente do banco de dados
+        public void ExcluirCliente()
         {
-            _getId = id;
-            _getNome = nome;
+
             DialogResult dialogResult = new DialogResult();
             try
             {
@@ -211,7 +198,6 @@ namespace Cad_Cliente.Views
                     Conexao.Open();
                     Comando.ExecuteNonQuery();
 
-                    LimparTela();
                 }
             }
             catch (Exception Ex)
@@ -225,27 +211,64 @@ namespace Cad_Cliente.Views
                 Comando = null;
             }
         }
-
+        //Botao de salvar
         private void btnSalvarCliente_Click(object sender, EventArgs e)
         {
             if (!Edit)
             {
                 // Aqui estara Incluindo um Novo cliente
-                NewCliente();
-
+                newClient();
             }
             else
             {
                 //Aqui estara Editando um cliente existente
-                EditarCliente(_getId, _getNome);
-
+                updateClient();
             }
-
         }
-
-        private void CadastroCliente_Load(object sender, EventArgs e)
+        public void consultaCep()
         {
-            pegaSelecionado();
+
+            if (!string.IsNullOrWhiteSpace(txtCep.Text))
+            {
+                try
+                {
+                    using (var ws = new WSCorreios.AtendeClienteClient())
+                    {
+
+                        var endereco = ws.consultaCEP(txtCep.Text.Trim());
+                        txtEnd.Text = endereco.end;
+                        txtEstado.Text = endereco.uf;
+                        txtCidade.Text = endereco.cidade;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCep.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Informe um CEP válido...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        //Pegando Id e Nome do cliente que foi selecionado na classe Cliente
+        public void getIdNomeClient(int id, string nome)
+        {
+            _getId = id;
+            _getNome = nome;
+        }
+        //Pegando valor da variavel Edit na classe Cliente
+        public void getEdit(bool edit)
+        {
+            Edit = edit;
+        }
+
+        private void txtCep_Leave(object sender, EventArgs e)
+        {
+            consultaCep();
+        }
+
+       
     }
 }

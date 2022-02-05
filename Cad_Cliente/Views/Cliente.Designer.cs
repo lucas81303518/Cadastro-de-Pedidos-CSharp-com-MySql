@@ -35,13 +35,9 @@ namespace Cad_Cliente
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.DgvCliente = new System.Windows.Forms.DataGridView();
             this.txtBusca_Cliente = new System.Windows.Forms.TextBox();
-            this.tp_Novo = new System.Windows.Forms.ToolTip(this.components);
-            this.tp_Editar = new System.Windows.Forms.ToolTip(this.components);
-            this.tp_Excluir = new System.Windows.Forms.ToolTip(this.components);
-            this.tp_Consultar = new System.Windows.Forms.ToolTip(this.components);
-            this.tp_Exibir = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.novoCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.editarCliente = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +45,9 @@ namespace Cad_Cliente
             this.atualizarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTipNovo = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipEditar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipExcluir = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +60,7 @@ namespace Cad_Cliente
             this.DgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgvCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.DgvCliente.BackgroundColor = System.Drawing.Color.Pink;
+            this.DgvCliente.BackgroundColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
@@ -75,7 +74,7 @@ namespace Cad_Cliente
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvCliente.DefaultCellStyle = dataGridViewCellStyle3;
@@ -84,6 +83,7 @@ namespace Cad_Cliente
             this.DgvCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DgvCliente.MultiSelect = false;
             this.DgvCliente.Name = "DgvCliente";
+            this.DgvCliente.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
@@ -181,6 +181,7 @@ namespace Cad_Cliente
             this.Controls.Add(this.DgvCliente);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Cliente";
@@ -198,18 +199,16 @@ namespace Cad_Cliente
         #endregion
         private System.Windows.Forms.DataGridView DgvCliente;
         private System.Windows.Forms.TextBox txtBusca_Cliente;
-        private System.Windows.Forms.ToolTip tp_Novo;
-        private System.Windows.Forms.ToolTip tp_Editar;
-        private System.Windows.Forms.ToolTip tp_Excluir;
-        private System.Windows.Forms.ToolTip tp_Consultar;
-        private System.Windows.Forms.ToolTip tp_Exibir;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoCliente;
-        private System.Windows.Forms.ToolStripMenuItem editarCliente;
-        private System.Windows.Forms.ToolStripMenuItem excluirCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem atualizarCliente;
+        private System.Windows.Forms.ToolTip toolTipNovo;
+        private System.Windows.Forms.ToolTip toolTipEditar;
+        private System.Windows.Forms.ToolTip toolTipExcluir;
+        public System.Windows.Forms.ToolStripMenuItem novoCliente;
+        public System.Windows.Forms.ToolStripMenuItem editarCliente;
+        public System.Windows.Forms.ToolStripMenuItem excluirCliente;
+        public System.Windows.Forms.ToolStripMenuItem atualizarCliente;
     }
 }
 

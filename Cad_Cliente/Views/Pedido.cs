@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -108,7 +109,7 @@ namespace Cad_Cliente
                     strSQL = "UPDATE Pedido SET Produto = @Produto, Cliente_Cadastrado = @Cliente_Cadastrado," +
                         " Valor_Total = @Valor_Total, Valor_Pago = @Valor_Pago, Custo = @Custo," +
                         " Status_Pedido = @Status_Pedido, Forma_Pagamento = @Forma_Pagamento, Data_Pedido = @Data_Pedido," +
-                        " Data_Entrega = @Data_Entrega WHERE ID = @ID";
+                        " Data_Entrega = @Data_Entrega WHERE Num_Pedido = @ID";
 
                     Comando = new MySqlCommand(strSQL, Conexao);
                     Comando.Parameters.AddWithValue("@ID", txtPedido.Text);
@@ -156,7 +157,7 @@ namespace Cad_Cliente
                     dialogResult = MessageBox.Show("Deseja Realmente Excluir esse Pedido?", "ATENÇAO!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        strSQL = "DELETE FROM Pedido WHERE ID = @ID";
+                        strSQL = "DELETE FROM Pedido WHERE Num_Pedido = @ID";
 
                         Comando = new MySqlCommand(strSQL, Conexao);
                         Comando.Parameters.AddWithValue("@ID", txtPedido.Text);
@@ -186,7 +187,7 @@ namespace Cad_Cliente
             {
                 Connection();
 
-                strSQL = "SELECT * FROM Pedido WHERE ID = @ID";
+                strSQL = "SELECT * FROM Pedido WHERE Num_Pedido = @ID";
 
                 Comando = new MySqlCommand(strSQL, Conexao);
                 Comando.Parameters.AddWithValue("@ID", txtPedido.Text);
@@ -196,7 +197,7 @@ namespace Cad_Cliente
 
                 while (Dr.Read())
                 {
-                    txtPedido.Text = Convert.ToString(Dr["ID"]);
+                    txtPedido.Text = Convert.ToString(Dr["Num_Pedido"]);
                     txtProduto.Text = Convert.ToString(Dr["Produto"]);
                     cbCliente_Pedido.Text = Convert.ToString(Dr["Cliente_Cadastrado"]);
                     cbStatus.Text = Convert.ToString(Dr["Status_Pedido"]);
@@ -227,7 +228,7 @@ namespace Cad_Cliente
             {
                 Connection();
 
-                strSQL = "SELECT * FROM Pedido Order by ID Desc";
+                strSQL = "SELECT * FROM Pedido";
 
                 DataTable Dt = new DataTable();
 
@@ -237,7 +238,7 @@ namespace Cad_Cliente
 
                 DgvPedido.DataSource = Dt;
             }
-            catch (Exception Ex)
+            catch (SqlException Ex)
             {
                 MessageBox.Show(Ex.Message);
             }
@@ -263,9 +264,9 @@ namespace Cad_Cliente
 
                     Comando = new MySqlCommand();
 
-                    Comando.CommandText = "Select * From Pedido" +
-                        " Where Pedido.Cliente_Cadastrado like('%" + txtBusca_Pedido.Text + "%')";
-                    Comando.Connection = Conexao;
+                    Comando.CommandText = $"Select * From Pedido Where Pedido.Cliente_Cadastrado like" +
+                                            $" {txtBusca_Pedido.Text}";
+                    Comando.Connection = Conexao; 
                     Da = new MySqlDataAdapter();
                     DataTable dt = new DataTable();
                     Da.SelectCommand = Comando;

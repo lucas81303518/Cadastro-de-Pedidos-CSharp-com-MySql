@@ -19,7 +19,7 @@ namespace Cad_Cliente
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_Principal());
+            Application.Run(new Tela_Login());
 
         }
     }

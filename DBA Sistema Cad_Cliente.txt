@@ -1,7 +1,9 @@
 create table Cliente(
 ID int auto_increment primary key,
 Nome varchar(50), 
-Telefone varchar(50), 
+Telefone varchar(50),
+Estado varchar(50) ,
+Cidade varchar(50) , 
 Endereço varchar(50) ,
 Numero varchar(50), 
 CEP varchar(50), 
@@ -30,8 +32,7 @@ Lucro_Total float,
 Maluart_50 float,
 Salario_30 float,
 Investimento_20 float,
-Cliente int,
-foreign key (Cliente) references Cliente(ID)
+
 );
 insert into Financas (Vendas_Total, Custo_Total, Lucro_Total, Maluart_50, Salario_30, Investimento_20) 
 select sum(p.Valor_Total), sum(p.Custo), (sum(p.Valor_Total)-sum(p.Custo)), ((sum(p.Valor_Total)-sum(p.Custo))*0.5), ((sum(p.Valor_Total)-sum(p.Custo))*0.3), ((sum(p.Valor_Total)-sum(p.Custo))*0.2)
