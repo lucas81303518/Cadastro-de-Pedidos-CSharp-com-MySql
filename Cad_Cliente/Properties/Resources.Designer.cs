@@ -253,6 +253,36 @@ namespace Cad_Cliente.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_pedido {
+            get {
+                object obj = ResourceManager.GetObject("img-pedido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_temp {
+            get {
+                object obj = ResourceManager.GetObject("login-temp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_temp1 {
+            get {
+                object obj = ResourceManager.GetObject("login-temp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logotipo_maluart_fundo_preto {
             get {
                 object obj = ResourceManager.GetObject("Logotipo maluart fundo preto", resourceCulture);
@@ -266,6 +296,16 @@ namespace Cad_Cliente.Properties {
         internal static System.Drawing.Bitmap Logotipo_maluart2 {
             get {
                 object obj = ResourceManager.GetObject("Logotipo maluart2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pedido {
+            get {
+                object obj = ResourceManager.GetObject("pedido", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

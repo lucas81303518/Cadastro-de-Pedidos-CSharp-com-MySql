@@ -68,66 +68,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastroCliente.cs">
+    <Compile Include="Views\CadastroClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CadastroCliente.Designer.cs">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <Compile Include="Views\CadastroClienteView.Designer.cs">
+      <DependentUpon>CadastroClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Cliente.cs">
+    <Compile Include="Views\CadastroPedidoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="Views\CadastroPedidoView.Designer.cs">
+      <DependentUpon>CadastroPedidoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Financas.cs">
+    <Compile Include="Views\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Financas.Designer.cs">
-      <DependentUpon>Financas.cs</DependentUpon>
+    <Compile Include="Views\ClienteView.Designer.cs">
+      <DependentUpon>ClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pedido.cs">
+    <Compile Include="Views\FinancasView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Pedido.Designer.cs">
-      <DependentUpon>Pedido.cs</DependentUpon>
+    <Compile Include="Views\FinancasView.Designer.cs">
+      <DependentUpon>FinancasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PedidoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PedidoView.Designer.cs">
+      <DependentUpon>PedidoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Tela Principal.cs">
+    <Compile Include="Views\Tela PrincipalView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Tela Principal.Designer.cs">
-      <DependentUpon>Tela Principal.cs</DependentUpon>
+    <Compile Include="Views\Tela PrincipalView.Designer.cs">
+      <DependentUpon>Tela PrincipalView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Validacao.cs">
+    <Compile Include="Views\ValidacaoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Validacao.Designer.cs">
-      <DependentUpon>Validacao.cs</DependentUpon>
+    <Compile Include="Views\ValidacaoView.Designer.cs">
+      <DependentUpon>ValidacaoView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\CadastroCliente.resx">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CadastroClienteView.resx">
+      <DependentUpon>CadastroClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CadastroPedidoView.resx">
+      <DependentUpon>CadastroPedidoView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Financas.resx">
-      <DependentUpon>Financas.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ClienteView.resx">
+      <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Pedido.resx">
-      <DependentUpon>Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FinancasView.resx">
+      <DependentUpon>FinancasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PedidoView.resx">
+      <DependentUpon>PedidoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Tela Principal.resx">
-      <DependentUpon>Tela Principal.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Tela PrincipalView.resx">
+      <DependentUpon>Tela PrincipalView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Validacao.resx">
-      <DependentUpon>Validacao.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ValidacaoView.resx">
+      <DependentUpon>ValidacaoView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\ServiceReference1\AtendeClienteService.wsdl" />
     <None Include="Connected Services\ServiceReference1\Cad_Cliente.ServiceReference1.atualizaPagamentoNaEntregaResponse.datasource">
@@ -575,5 +584,18 @@
   <ItemGroup>
     <None Include="Resources\Usuário-HM.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedido.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-pedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-temp1.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

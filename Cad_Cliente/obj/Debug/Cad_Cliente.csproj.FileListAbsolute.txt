@@ -54,4 +54,5 @@ C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_
 C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.exe
 C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.pdb
 C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.screens.Tela_Principal.resources
-C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.Views.CadastroCliente.resources
+C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.Views.CadastroClienteView.resources
+C:\Users\lucas\repos\Projeto-CSharp-With-MySql-GitHub\Cad_Cliente\obj\Debug\Cad_Cliente.Views.CadastroPedidoView.resources
