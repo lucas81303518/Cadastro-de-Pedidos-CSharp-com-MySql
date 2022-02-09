@@ -122,8 +122,7 @@ namespace Cad_Cliente
             }
             else
             {
-                MessageBox.Show("Selecione a maneira de exibir!!");
-                cbFiltroFinancas.Focus();
+               
             }
         }
         private void cbFiltroFinancas_SelectedValueChanged(object sender, EventArgs e)
