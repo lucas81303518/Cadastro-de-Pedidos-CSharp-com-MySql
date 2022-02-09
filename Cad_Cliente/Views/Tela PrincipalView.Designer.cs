@@ -39,6 +39,8 @@ namespace Cad_Cliente.screens
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblUsuario1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,11 +124,32 @@ namespace Cad_Cliente.screens
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 215);
+            this.label3.Location = new System.Drawing.Point(167, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 41);
             this.label3.TabIndex = 33;
             this.label3.Text = "Sistema";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(330, 216);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 41);
+            this.lblUsuario.TabIndex = 34;
+            // 
+            // lblUsuario1
+            // 
+            this.lblUsuario1.AutoSize = true;
+            this.lblUsuario1.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario1.Location = new System.Drawing.Point(311, 216);
+            this.lblUsuario1.Name = "lblUsuario1";
+            this.lblUsuario1.Size = new System.Drawing.Size(140, 41);
+            this.lblUsuario1.TabIndex = 35;
+            this.lblUsuario1.Text = "Usuario";
             // 
             // Tela_Principal
             // 
@@ -135,6 +158,8 @@ namespace Cad_Cliente.screens
             this.BackgroundImage = global::Cad_Cliente.Properties.Resources.capa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(610, 349);
+            this.Controls.Add(this.lblUsuario1);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -162,5 +187,7 @@ namespace Cad_Cliente.screens
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem finançasToolStripMenuItem;
+        public System.Windows.Forms.Label lblUsuario;
+        public System.Windows.Forms.Label lblUsuario1;
     }
 }

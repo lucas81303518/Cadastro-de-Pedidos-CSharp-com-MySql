@@ -123,6 +123,16 @@ namespace Cad_Cliente.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconeFiltro {
+            get {
+                object obj = ResourceManager.GetObject("iconeFiltro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancelar_assinatura_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cancelar-assinatura-48", resourceCulture);

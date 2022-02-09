@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Cad_Cliente.Views
 {
@@ -61,7 +63,9 @@ namespace Cad_Cliente.Views
 
             Conexao.Close();
             Comando = null;
+            strSQL = "";
         }
+       
         public void newPedido()
         {
             try
@@ -81,8 +85,8 @@ namespace Cad_Cliente.Views
                 Comando.Parameters.AddWithValue("@Valor_Pago", Convert.ToDouble(txtValPago.Text));
                 Comando.Parameters.AddWithValue("@Custo", Convert.ToDouble(txtCusto.Text));
                 Comando.Parameters.AddWithValue("@Forma_Pagamento", cbFormaPag.Text);
-                Comando.Parameters.AddWithValue("@Data_Pedido", DateTime.Parse(dtPedido.Text));
-                Comando.Parameters.AddWithValue("@Data_Entrega", DateTime.Parse(dtEntrega.Text));
+                Comando.Parameters.AddWithValue("@Data_Pedido", dtPedido.Value.Date);
+                Comando.Parameters.AddWithValue("@Data_Entrega", dtEntrega.Value.Date);
                 Comando.Parameters.AddWithValue("@ClienteId", id);
                 Conexao.Open();
                 Comando.ExecuteNonQuery();

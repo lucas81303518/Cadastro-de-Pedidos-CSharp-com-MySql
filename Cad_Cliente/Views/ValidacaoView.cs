@@ -23,15 +23,29 @@ namespace Cad_Cliente
         {
             Tela_Principal tela_Principal = new Tela_Principal();
 
-            Admin Mariana = new Admin("Mari", "23072807");
+            Admin Mariana = new Admin("Mariana", "23072807");
             Usuario Lucas = new Usuario("Lucas", "23072807");
-
-            if (ValidarUsuario(Mariana))
+            if (txtLogin.Text == Mariana.Login)
             {
-                tela_Principal.ShowDialog();
-                
-                txtLogin.Text = "";
-                txtSenha.Text = "";
+                if (ValidarUsuario(Mariana))
+                {
+                    tela_Principal.lblUsuario1.Text = Mariana.Login; 
+                    tela_Principal.ShowDialog();
+
+                    txtLogin.Text = "";
+                    txtSenha.Text = "";
+                }
+            }
+            else
+            {
+                if (ValidarUsuario(Lucas))
+                {
+                    tela_Principal.lblUsuario1.Text = Lucas.Login;
+                    tela_Principal.ShowDialog();
+
+                    txtLogin.Text = "";
+                    txtSenha.Text = "";
+                }
             }
         }
         public bool ValidarUsuario(Usuario usuario)

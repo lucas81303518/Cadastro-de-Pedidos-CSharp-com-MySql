@@ -79,7 +79,7 @@ namespace Cad_Cliente
                     Comando = new MySqlCommand();
 
                     Comando.CommandText = "Select * from Pedido " +
-                                            "Where Pedido.Cliente_Cadastrado like ('%" + txtBusca_Pedido.Text + "%')";
+                                          "Where Pedido.Cliente_Cadastrado like ('%" + txtBusca_Pedido.Text + "%')";
                     Comando.Connection = Conexao;
                     Da = new MySqlDataAdapter();
                     DataTable dt = new DataTable();
