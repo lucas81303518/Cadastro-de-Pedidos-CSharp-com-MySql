@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cad_Cliente.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,5 +36,10 @@ namespace Cad_Cliente.screens
             financas.Show();
         }
 
+        private void cadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            CadastroUsuario cadastroUsuario = new CadastroUsuario();
+            cadastroUsuario.Show();
+        }
     }
 }

@@ -45,13 +45,14 @@ namespace Cad_Cliente
             this.novoCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.editarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirPedido = new System.Windows.Forms.ToolStripMenuItem();
-            this.atualizarPedido = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedido)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(497, 31);
@@ -63,6 +64,8 @@ namespace Cad_Cliente
             // 
             // txtBusca_Pedido
             // 
+            this.txtBusca_Pedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusca_Pedido.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca_Pedido.Location = new System.Drawing.Point(500, 53);
             this.txtBusca_Pedido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -78,6 +81,9 @@ namespace Cad_Cliente
             this.DgvPedido.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DgvPedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DgvPedido.BackgroundColor = System.Drawing.Color.Pink;
@@ -124,6 +130,8 @@ namespace Cad_Cliente
             // 
             // cbFiltrar
             // 
+            this.cbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFiltrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbFiltrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltrar.FormattingEnabled = true;
@@ -144,6 +152,8 @@ namespace Cad_Cliente
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(275, 32);
@@ -155,15 +165,18 @@ namespace Cad_Cliente
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoCliente,
             this.editarCliente,
-            this.excluirPedido,
-            this.atualizarPedido});
+            this.excluirPedido});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(220, 25);
             this.menuStrip1.TabIndex = 71;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -190,14 +203,6 @@ namespace Cad_Cliente
             this.excluirPedido.Size = new System.Drawing.Size(73, 21);
             this.excluirPedido.Text = "Excluir";
             this.excluirPedido.Click += new System.EventHandler(this.excluirPedido_Click);
-            // 
-            // atualizarPedido
-            // 
-            this.atualizarPedido.Image = global::Cad_Cliente.Properties.Resources.icons8_sincronizar_100;
-            this.atualizarPedido.Name = "atualizarPedido";
-            this.atualizarPedido.Size = new System.Drawing.Size(88, 21);
-            this.atualizarPedido.Text = "Atualizar";
-            this.atualizarPedido.Click += new System.EventHandler(this.atualizarPedido_Click);
             // 
             // Pedido
             // 
@@ -239,6 +244,5 @@ namespace Cad_Cliente
         public System.Windows.Forms.ToolStripMenuItem novoCliente;
         public System.Windows.Forms.ToolStripMenuItem editarCliente;
         public System.Windows.Forms.ToolStripMenuItem excluirPedido;
-        public System.Windows.Forms.ToolStripMenuItem atualizarPedido;
     }
 }

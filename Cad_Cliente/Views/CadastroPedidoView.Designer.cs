@@ -53,6 +53,7 @@ namespace Cad_Cliente.Views
             // 
             // cbStatus
             // 
+            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbStatus.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
@@ -63,17 +64,19 @@ namespace Cad_Cliente.Views
             "Produção",
             "Finalizado",
             "Entregue"});
-            this.cbStatus.Location = new System.Drawing.Point(533, 32);
+            this.cbStatus.Location = new System.Drawing.Point(205, 347);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(172, 25);
+            this.cbStatus.Size = new System.Drawing.Size(263, 25);
             this.cbStatus.TabIndex = 72;
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(530, 11);
+            this.label11.Location = new System.Drawing.Point(202, 326);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 17);
@@ -82,18 +85,21 @@ namespace Cad_Cliente.Views
             // 
             // txtCusto
             // 
+            this.txtCusto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCusto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusto.Location = new System.Drawing.Point(344, 175);
+            this.txtCusto.Location = new System.Drawing.Point(207, 246);
             this.txtCusto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(168, 22);
+            this.txtCusto.Size = new System.Drawing.Size(259, 22);
             this.txtCusto.TabIndex = 71;
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(340, 147);
+            this.label10.Location = new System.Drawing.Point(203, 218);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 17);
@@ -102,9 +108,11 @@ namespace Cad_Cliente.Views
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 11);
+            this.label6.Location = new System.Drawing.Point(202, 18);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 17);
@@ -113,11 +121,11 @@ namespace Cad_Cliente.Views
             // 
             // cbCliente_Pedido
             // 
-            this.cbCliente_Pedido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbCliente_Pedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbCliente_Pedido.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbCliente_Pedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCliente_Pedido.FormattingEnabled = true;
-            this.cbCliente_Pedido.Location = new System.Drawing.Point(10, 32);
+            this.cbCliente_Pedido.Location = new System.Drawing.Point(205, 39);
             this.cbCliente_Pedido.Margin = new System.Windows.Forms.Padding(4);
             this.cbCliente_Pedido.Name = "cbCliente_Pedido";
             this.cbCliente_Pedido.Size = new System.Drawing.Size(261, 25);
@@ -125,8 +133,9 @@ namespace Cad_Cliente.Views
             // 
             // txtProduto
             // 
+            this.txtProduto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProduto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.Location = new System.Drawing.Point(10, 98);
+            this.txtProduto.Location = new System.Drawing.Point(205, 86);
             this.txtProduto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(396, 22);
@@ -134,31 +143,35 @@ namespace Cad_Cliente.Views
             // 
             // dtEntrega
             // 
+            this.dtEntrega.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtEntrega.Cursor = System.Windows.Forms.Cursors.Default;
             this.dtEntrega.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEntrega.Location = new System.Drawing.Point(533, 235);
+            this.dtEntrega.Location = new System.Drawing.Point(207, 456);
             this.dtEntrega.Margin = new System.Windows.Forms.Padding(4);
             this.dtEntrega.Name = "dtEntrega";
-            this.dtEntrega.Size = new System.Drawing.Size(140, 22);
+            this.dtEntrega.Size = new System.Drawing.Size(259, 22);
             this.dtEntrega.TabIndex = 75;
             // 
             // dtPedido
             // 
+            this.dtPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtPedido.Cursor = System.Windows.Forms.Cursors.Default;
             this.dtPedido.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtPedido.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtPedido.Location = new System.Drawing.Point(533, 159);
+            this.dtPedido.Location = new System.Drawing.Point(207, 403);
             this.dtPedido.Margin = new System.Windows.Forms.Padding(4);
             this.dtPedido.Name = "dtPedido";
-            this.dtPedido.Size = new System.Drawing.Size(135, 22);
+            this.dtPedido.Size = new System.Drawing.Size(259, 22);
             this.dtPedido.TabIndex = 74;
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(529, 205);
+            this.label9.Location = new System.Drawing.Point(203, 426);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 17);
@@ -167,9 +180,11 @@ namespace Cad_Cliente.Views
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(529, 133);
+            this.label7.Location = new System.Drawing.Point(203, 377);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 17);
@@ -178,18 +193,21 @@ namespace Cad_Cliente.Views
             // 
             // txtValPago
             // 
+            this.txtValPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtValPago.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValPago.Location = new System.Drawing.Point(167, 175);
+            this.txtValPago.Location = new System.Drawing.Point(207, 195);
             this.txtValPago.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValPago.Name = "txtValPago";
-            this.txtValPago.Size = new System.Drawing.Size(168, 22);
+            this.txtValPago.Size = new System.Drawing.Size(259, 22);
             this.txtValPago.TabIndex = 70;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(163, 147);
+            this.label4.Location = new System.Drawing.Point(203, 167);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 17);
@@ -198,6 +216,7 @@ namespace Cad_Cliente.Views
             // 
             // cbFormaPag
             // 
+            this.cbFormaPag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFormaPag.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbFormaPag.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFormaPag.FormattingEnabled = true;
@@ -207,26 +226,29 @@ namespace Cad_Cliente.Views
             "Boleto",
             "Deposito",
             "Site"});
-            this.cbFormaPag.Location = new System.Drawing.Point(533, 95);
+            this.cbFormaPag.Location = new System.Drawing.Point(207, 295);
             this.cbFormaPag.Margin = new System.Windows.Forms.Padding(4);
             this.cbFormaPag.Name = "cbFormaPag";
-            this.cbFormaPag.Size = new System.Drawing.Size(147, 25);
+            this.cbFormaPag.Size = new System.Drawing.Size(259, 25);
             this.cbFormaPag.TabIndex = 73;
             // 
             // txtValTotal
             // 
+            this.txtValTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtValTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValTotal.Location = new System.Drawing.Point(9, 175);
+            this.txtValTotal.Location = new System.Drawing.Point(205, 136);
             this.txtValTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtValTotal.Name = "txtValTotal";
-            this.txtValTotal.Size = new System.Drawing.Size(148, 22);
+            this.txtValTotal.Size = new System.Drawing.Size(261, 22);
             this.txtValTotal.TabIndex = 69;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(530, 71);
+            this.label5.Location = new System.Drawing.Point(204, 271);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 17);
@@ -235,9 +257,11 @@ namespace Cad_Cliente.Views
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 150);
+            this.label3.Location = new System.Drawing.Point(200, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 17);
@@ -246,9 +270,11 @@ namespace Cad_Cliente.Views
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 79);
+            this.label2.Location = new System.Drawing.Point(204, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
@@ -257,11 +283,12 @@ namespace Cad_Cliente.Views
             // 
             // btnCancelarPedido
             // 
+            this.btnCancelarPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelarPedido.BackColor = System.Drawing.Color.White;
             this.btnCancelarPedido.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarPedido.Image = global::Cad_Cliente.Properties.Resources.icons8_cancelar_assinatura_481;
             this.btnCancelarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarPedido.Location = new System.Drawing.Point(170, 292);
+            this.btnCancelarPedido.Location = new System.Drawing.Point(340, 492);
             this.btnCancelarPedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelarPedido.Name = "btnCancelarPedido";
             this.btnCancelarPedido.Size = new System.Drawing.Size(115, 43);
@@ -273,11 +300,12 @@ namespace Cad_Cliente.Views
             // 
             // btnSalvarPedido
             // 
+            this.btnSalvarPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalvarPedido.BackColor = System.Drawing.Color.White;
             this.btnSalvarPedido.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarPedido.Image = global::Cad_Cliente.Properties.Resources.icons8_salvar_482;
             this.btnSalvarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarPedido.Location = new System.Drawing.Point(45, 292);
+            this.btnSalvarPedido.Location = new System.Drawing.Point(215, 492);
             this.btnSalvarPedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalvarPedido.Name = "btnSalvarPedido";
             this.btnSalvarPedido.Size = new System.Drawing.Size(115, 43);
@@ -294,7 +322,7 @@ namespace Cad_Cliente.Views
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Cad_Cliente.Properties.Resources.img_pedido;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(712, 408);
+            this.ClientSize = new System.Drawing.Size(712, 578);
             this.Controls.Add(this.btnCancelarPedido);
             this.Controls.Add(this.btnSalvarPedido);
             this.Controls.Add(this.cbStatus);

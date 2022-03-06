@@ -36,7 +36,7 @@ namespace Cad_Cliente
         }
 
         //Método de Exibir Pedidos
-        private void Exibir()
+        public void Exibir()
         {
             try
             {
@@ -108,7 +108,6 @@ namespace Cad_Cliente
         //Método de quando abre a página Pedido
         private void Pedido_Load(object sender, EventArgs e)
         {
-            cbFiltrar.SelectedIndex = 0;
             Exibir();
         }
 
@@ -246,14 +245,14 @@ namespace Cad_Cliente
 
         private void novoCliente_Click(object sender, EventArgs e)
         {
-            CadastroPedidoView cadastroPedido = new CadastroPedidoView();
+            CadastroPedidoView cadastroPedido = new CadastroPedidoView(this);
             cadastroPedido.Show();
         }
         private void editarCliente_Click(object sender, EventArgs e)
         {
             Edit = true;
 
-            CadastroPedidoView cadastroPedido = new CadastroPedidoView();
+            CadastroPedidoView cadastroPedido = new CadastroPedidoView(this);
             cadastroPedido.getIdPedido(_getId);
             cadastroPedido.getEdit(Edit);
 

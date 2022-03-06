@@ -36,11 +36,7 @@ namespace Cad_Cliente.screens
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.finançasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblUsuario1 = new System.Windows.Forms.Label();
+            this.cadastrarFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +45,12 @@ namespace Cad_Cliente.screens
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuPrincipal});
+            this.MenuPrincipal,
+            this.cadastrarFuncionario});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(997, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,72 +94,23 @@ namespace Cad_Cliente.screens
             this.finançasToolStripMenuItem.Text = "Finanças";
             this.finançasToolStripMenuItem.Click += new System.EventHandler(this.finançasToolStripMenuItem_Click);
             // 
-            // label1
+            // cadastrarFuncionario
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 41);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "ao";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(203, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 41);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Bem Vindo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(167, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 41);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Sistema";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(330, 216);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 41);
-            this.lblUsuario.TabIndex = 34;
-            // 
-            // lblUsuario1
-            // 
-            this.lblUsuario1.AutoSize = true;
-            this.lblUsuario1.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario1.Location = new System.Drawing.Point(311, 216);
-            this.lblUsuario1.Name = "lblUsuario1";
-            this.lblUsuario1.Size = new System.Drawing.Size(140, 41);
-            this.lblUsuario1.TabIndex = 35;
-            this.lblUsuario1.Text = "Usuario";
+            this.cadastrarFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cadastrarFuncionario.Name = "cadastrarFuncionario";
+            this.cadastrarFuncionario.Size = new System.Drawing.Size(166, 20);
+            this.cadastrarFuncionario.Text = "Cadastrar Funcionario";
+            this.cadastrarFuncionario.Visible = false;
+            this.cadastrarFuncionario.Click += new System.EventHandler(this.cadastrarFuncionario_Click);
             // 
             // Tela_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Cad_Cliente.Properties.Resources.capa;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Cad_Cliente.Properties.Resources.Logotipo_maluart_fundo_preto;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(610, 349);
-            this.Controls.Add(this.lblUsuario1);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(997, 585);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -179,15 +127,11 @@ namespace Cad_Cliente.screens
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem MenuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem novoEditarExcluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem finançasToolStripMenuItem;
-        public System.Windows.Forms.Label lblUsuario;
-        public System.Windows.Forms.Label lblUsuario1;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionario;
     }
 }

@@ -23,64 +23,98 @@ namespace Cad_Cliente
         {
             Tela_Principal tela_Principal = new Tela_Principal();
 
-            Admin Mariana = new Admin("Mariana", "23072807");
-            Usuario Lucas = new Usuario("Lucas", "23072807");
-            if (txtLogin.Text == Mariana.Login)
-            {
-                if (ValidarUsuario(Mariana))
-                {
-                    tela_Principal.lblUsuario1.Text = Mariana.Login; 
-                    tela_Principal.ShowDialog();
+            
 
-                    txtLogin.Text = "";
-                    txtSenha.Text = "";
-                }
-            }
-            else
-            {
-                if (ValidarUsuario(Lucas))
-                {
-                    tela_Principal.lblUsuario1.Text = Lucas.Login;
-                    tela_Principal.ShowDialog();
-
-                    txtLogin.Text = "";
-                    txtSenha.Text = "";
-                }
-            }
-        }
-        public bool ValidarUsuario(Usuario usuario)
-        {
-            if (usuario.Login == txtLogin.Text && usuario.Senha == txtSenha.Text)
-            {
-                return true;
-            }
-            else if (txtLogin.Text == "")
-            {
-                MessageBox.Show("Campo de login não preenchido!!");
-                return false;
-
-            }
-            else if (txtSenha.Text == "")
-            {
-                MessageBox.Show("Campo de senha não preenchido!!");
-                return false;
-
-
-            }
-            else if (txtLogin.Text == "" && txtSenha.Text == "")
-            {
-                MessageBox.Show("Campos não preenchidos!!");
-                return false;
-
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou Senha Inválidos!!");
-                return false;
-
-            }
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public bool ValidarUsuario(Usuario usuario)
+        //{
+
+        //if (ValidarUsuario(user))
+        //{
+        //    tela_Principal.lblUsuario1.Text = Mariana.Login;
+        //    tela_Principal.Show();
+
+        //    txtLogin.Text = "";
+        //    txtSenha.Text = "";
+        //}
+
+
+
+
+        //    if (usuario.Login == txtLogin.Text && usuario.Senha == txtSenha.Text)
+        //    {
+        //        return true;
+        //    }
+        //    else if (txtLogin.Text == "")
+        //    {
+        //        MessageBox.Show("Campo de login não preenchido!!");
+        //        return false;
+
+        //    }
+        //    else if (txtSenha.Text == "")
+        //    {
+        //        MessageBox.Show("Campo de senha não preenchido!!");
+        //        return false;
+
+
+        //    }
+        //    else if (txtLogin.Text == "" && txtSenha.Text == "")
+        //    {
+        //        MessageBox.Show("Campos não preenchidos!!");
+        //        return false;
+
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Usuário ou Senha Inválidos!!");
+        //        return false;
+
+        //    }
+
+        //}
         private void checkBox1_Click(object sender, EventArgs e)
         {
             if (checkBox_Senha.Checked)

@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -64,7 +64,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,6 +81,12 @@
     </Compile>
     <Compile Include="Views\CadastroPedidoView.Designer.cs">
       <DependentUpon>CadastroPedidoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CadastroUsuario.Designer.cs">
+      <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ClienteView.cs">
       <SubType>Form</SubType>
@@ -120,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CadastroPedidoView.resx">
       <DependentUpon>CadastroPedidoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CadastroUsuario.resx">
+      <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
@@ -533,9 +541,6 @@
     <None Include="Resources\Cadastros.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Cadastros1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -601,6 +606,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconeFiltro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-principal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgWhatsapp.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -273,6 +273,26 @@ namespace Cad_Cliente.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgWhatsapp {
+            get {
+                object obj = ResourceManager.GetObject("imgWhatsapp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgWhatsapp1 {
+            get {
+                object obj = ResourceManager.GetObject("imgWhatsapp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_temp {
             get {
                 object obj = ResourceManager.GetObject("login-temp", resourceCulture);
@@ -306,6 +326,16 @@ namespace Cad_Cliente.Properties {
         internal static System.Drawing.Bitmap Logotipo_maluart2 {
             get {
                 object obj = ResourceManager.GetObject("Logotipo maluart2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_principal {
+            get {
+                object obj = ResourceManager.GetObject("menu-principal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,6 +15,8 @@ namespace Cad_Cliente.Views
 {
     public partial class CadastroPedidoView : Form
     {
+        public Pedido pedido { get; set; }
+
         public int _getId;
         public bool Edit;
         public int id;
@@ -24,8 +26,9 @@ namespace Cad_Cliente.Views
         MySqlDataReader Dr;
 
         string strSQL;
-        public CadastroPedidoView()
+        public CadastroPedidoView(Pedido pedido)
         {
+            this.pedido = pedido;
             InitializeComponent();
         }
         private void Connection()
@@ -91,6 +94,7 @@ namespace Cad_Cliente.Views
                 Conexao.Open();
                 Comando.ExecuteNonQuery();
                 LimparTela();
+                pedido.Exibir();
                 Hide();
             }
             catch (Exception Ex)
@@ -146,6 +150,7 @@ namespace Cad_Cliente.Views
                 Comando.ExecuteNonQuery();
 
                 LimparTela();
+                pedido.Exibir();
                 Hide();
             }
             catch (Exception Ex)
@@ -171,6 +176,7 @@ namespace Cad_Cliente.Views
                 Comando.Parameters.AddWithValue("@ID", _getId);
 
                 Conexao.Open();
+
                 Dr = Comando.ExecuteReader();
 
                 while (Dr.Read())

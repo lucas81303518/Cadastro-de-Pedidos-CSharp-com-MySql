@@ -75,3 +75,4 @@ C:\Users\lucas\repos\Cadastro-de-Pedidos-CSharp-com-MySql\Cad_Cliente\obj\Debug\
 C:\Users\lucas\repos\Cadastro-de-Pedidos-CSharp-com-MySql\Cad_Cliente\obj\Debug\Cad_Cliente.pdb
 C:\Users\lucas\repos\Cadastro-de-Pedidos-CSharp-com-MySql\Cad_Cliente\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lucas\repos\Cadastro-de-Pedidos-CSharp-com-MySql\Cad_Cliente\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucas\repos\Cadastro-de-Pedidos-CSharp-com-MySql\Cad_Cliente\obj\Debug\Cad_Cliente.Views.CadastroUsuario.resources

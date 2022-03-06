@@ -38,15 +38,15 @@ namespace Cad_Cliente
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.DgvCliente = new System.Windows.Forms.DataGridView();
             this.txtBusca_Cliente = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.novoCliente = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarCliente = new System.Windows.Forms.ToolStripMenuItem();
-            this.atualizarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTipNovo = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipEditar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipExcluir = new System.Windows.Forms.ToolTip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.novoCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemWhatsapp = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,9 @@ namespace Cad_Cliente
             this.DgvCliente.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgvCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DgvCliente.BackgroundColor = System.Drawing.Color.Silver;
@@ -101,49 +104,14 @@ namespace Cad_Cliente
             // 
             // txtBusca_Cliente
             // 
+            this.txtBusca_Cliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBusca_Cliente.Location = new System.Drawing.Point(469, 47);
             this.txtBusca_Cliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBusca_Cliente.Name = "txtBusca_Cliente";
             this.txtBusca_Cliente.Size = new System.Drawing.Size(223, 23);
             this.txtBusca_Cliente.TabIndex = 27;
             this.txtBusca_Cliente.TextChanged += new System.EventHandler(this.txtBusca_Cliente_TextChanged);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoCliente,
-            this.editarCliente,
-            this.atualizarCliente});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 25);
-            this.menuStrip1.TabIndex = 29;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // novoCliente
-            // 
-            this.novoCliente.Image = global::Cad_Cliente.Properties.Resources.user1;
-            this.novoCliente.Name = "novoCliente";
-            this.novoCliente.Size = new System.Drawing.Size(69, 21);
-            this.novoCliente.Text = "Novo";
-            this.novoCliente.Click += new System.EventHandler(this.novoCliente_Click);
-            // 
-            // editarCliente
-            // 
-            this.editarCliente.Image = global::Cad_Cliente.Properties.Resources.icons8_editar_nó_481;
-            this.editarCliente.Name = "editarCliente";
-            this.editarCliente.Size = new System.Drawing.Size(70, 21);
-            this.editarCliente.Text = "Editar";
-            this.editarCliente.Click += new System.EventHandler(this.editarCliente_Click);
-            // 
-            // atualizarCliente
-            // 
-            this.atualizarCliente.Image = global::Cad_Cliente.Properties.Resources.icons8_sincronizar_100;
-            this.atualizarCliente.Name = "atualizarCliente";
-            this.atualizarCliente.Size = new System.Drawing.Size(88, 21);
-            this.atualizarCliente.Text = "Atualizar";
-            this.atualizarCliente.Click += new System.EventHandler(this.atualizarCliente_Click);
             // 
             // novoClienteToolStripMenuItem
             // 
@@ -153,6 +121,8 @@ namespace Cad_Cliente
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(466, 26);
             this.label1.Name = "label1";
@@ -160,10 +130,50 @@ namespace Cad_Cliente
             this.label1.TabIndex = 30;
             this.label1.Text = "Buscar cliente:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoCliente,
+            this.editarCliente,
+            this.menuItemWhatsapp});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(708, 25);
+            this.menuStrip1.TabIndex = 31;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // novoCliente
+            // 
+            this.novoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.novoCliente.Image = global::Cad_Cliente.Properties.Resources.user;
+            this.novoCliente.Name = "novoCliente";
+            this.novoCliente.Size = new System.Drawing.Size(69, 21);
+            this.novoCliente.Text = "Novo";
+            this.novoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.novoCliente.Click += new System.EventHandler(this.NovoCliente_Click);
+            // 
+            // editarCliente
+            // 
+            this.editarCliente.Image = global::Cad_Cliente.Properties.Resources.icons8_editar_nó_48;
+            this.editarCliente.Name = "editarCliente";
+            this.editarCliente.Size = new System.Drawing.Size(70, 21);
+            this.editarCliente.Text = "Editar";
+            this.editarCliente.Click += new System.EventHandler(this.EditarCliente_Click);
+            // 
+            // menuItemWhatsapp
+            // 
+            this.menuItemWhatsapp.Image = global::Cad_Cliente.Properties.Resources.imgWhatsapp1;
+            this.menuItemWhatsapp.Name = "menuItemWhatsapp";
+            this.menuItemWhatsapp.Size = new System.Drawing.Size(98, 21);
+            this.menuItemWhatsapp.Text = "Whatsapp";
+            this.menuItemWhatsapp.Click += new System.EventHandler(this.menuItemWhatsapp_Click);
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(708, 317);
             this.Controls.Add(this.label1);
@@ -172,7 +182,6 @@ namespace Cad_Cliente
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -189,15 +198,15 @@ namespace Cad_Cliente
         #endregion
         private System.Windows.Forms.DataGridView DgvCliente;
         private System.Windows.Forms.TextBox txtBusca_Cliente;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTipNovo;
         private System.Windows.Forms.ToolTip toolTipEditar;
         private System.Windows.Forms.ToolTip toolTipExcluir;
-        public System.Windows.Forms.ToolStripMenuItem novoCliente;
-        public System.Windows.Forms.ToolStripMenuItem editarCliente;
-        public System.Windows.Forms.ToolStripMenuItem atualizarCliente;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem novoCliente;
+        private System.Windows.Forms.ToolStripMenuItem editarCliente;
+        private System.Windows.Forms.ToolStripMenuItem menuItemWhatsapp;
     }
 }
 

@@ -13,6 +13,7 @@ namespace Cad_Cliente.Views
 {
     public partial class CadastroClienteView : Form
     {
+        public Cliente cliente { get; set; }
 
         MySqlConnection Conexao;
         MySqlCommand Comando;
@@ -24,9 +25,14 @@ namespace Cad_Cliente.Views
         public int _getId;//Variavel para guardar o Id do cliente  
         public string _getNome;
 
+        public CadastroClienteView(Cliente cliente)
+        {
+            this.cliente = cliente;
+            InitializeComponent();
+
+        }
         public CadastroClienteView()
         {
-            InitializeComponent();
 
         }
 
@@ -53,7 +59,7 @@ namespace Cad_Cliente.Views
 
                 strSQL = "INSERT INTO Cliente (NOME, TELEFONE,ESTADO, CIDADE, ENDEREÇO, NUMERO, CEP, INSTAGRAM)" +
                                 " VALUES ( @NOME, @TELEFONE,@ESTADO, @CIDADE, @ENDEREÇO, @NUMERO, @CEP, @INSTAGRAM)";
-                
+
                 Comando = new MySqlCommand(strSQL, Conexao);
                 Comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                 Comando.Parameters.AddWithValue("@TELEFONE", txtTel.Text);
@@ -65,6 +71,7 @@ namespace Cad_Cliente.Views
                 Comando.Parameters.AddWithValue("@INSTAGRAM", txtInstagram.Text);
                 Conexao.Open();
                 Comando.ExecuteNonQuery();
+                cliente.Exibir();
                 Hide();
             }
             catch (Exception Ex)
@@ -78,7 +85,7 @@ namespace Cad_Cliente.Views
                 Conexao.Close();
                 Conexao = null;
                 Comando = null;
-                
+
             }
         }
         //Método para atualizar o cliente selecionado.
@@ -111,7 +118,8 @@ namespace Cad_Cliente.Views
                     Comando.Parameters.AddWithValue("@INSTAGRAM", txtInstagram.Text);
                     Conexao.Open();
                     Comando.ExecuteNonQuery();
-
+                    Hide();
+                    cliente.Exibir();
                     cleanScreen();
                 }
                 else
@@ -130,7 +138,6 @@ namespace Cad_Cliente.Views
                 Conexao.Close();
                 Conexao = null;
                 Comando = null;
-                Hide();
             }
 
         }
@@ -142,7 +149,7 @@ namespace Cad_Cliente.Views
             {
                 Connection();
 
-                strSQL = "SELECT * FROM Cliente WHERE ID = @ID";
+                strSQL = "SELECT * FROM Cliente WHERE Id = @ID";
 
                 Comando = new MySqlCommand(strSQL, Conexao);
                 Comando.Parameters.AddWithValue("@ID", _getId);
@@ -175,7 +182,7 @@ namespace Cad_Cliente.Views
                 Comando = null;
             }
         }
-        
+
         //Botao de salvar
         private void btnSalvarCliente_Click(object sender, EventArgs e)
         {
