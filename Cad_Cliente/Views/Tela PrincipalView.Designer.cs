@@ -42,7 +42,7 @@ namespace Cad_Cliente.screens
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuPrincipal,
@@ -50,7 +50,7 @@ namespace Cad_Cliente.screens
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(997, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(708, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +70,7 @@ namespace Cad_Cliente.screens
             this.pedidoToolStripMenuItem1,
             this.finançasToolStripMenuItem});
             this.novoEditarExcluirToolStripMenuItem.Name = "novoEditarExcluirToolStripMenuItem";
-            this.novoEditarExcluirToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.novoEditarExcluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoEditarExcluirToolStripMenuItem.Text = "Tabelas";
             // 
             // clienteToolStripMenuItem
@@ -107,10 +107,9 @@ namespace Cad_Cliente.screens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::Cad_Cliente.Properties.Resources.Logotipo_maluart_fundo_preto;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(997, 585);
+            this.ClientSize = new System.Drawing.Size(708, 317);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
